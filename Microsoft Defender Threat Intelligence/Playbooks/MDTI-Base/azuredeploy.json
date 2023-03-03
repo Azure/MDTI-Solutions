@@ -1,0 +1,126 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+	"metadata": {
+        "comments": "Establish the needed base resources to leverage with all MDTI playbooks.",
+        "author": "Ajay Kallur, Microsoft"
+    },
+    "parameters": {
+        "workflows_MDTI_Base_name": {
+            "defaultValue": "MDTI-Base",
+            "type": "String"
+        },
+		"Client-Id": {
+			"defaultValue": "Client-ID",
+			"type": "String"
+		},
+		"Client-Secret": {
+			"defaultValue": "Client-Secret",
+			"type": "SecureString"
+		},
+		"MDTI-Resource": {
+			"defaultValue": "https://ti.defender.microsoft.com",
+			"type": "String"
+		}
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Logic/workflows",
+            "apiVersion": "2017-07-01",
+            "name": "[parameters('workflows_MDTI_Base_name')]",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "Source": "MDTI"
+            },
+            "properties": {
+                "state": "Enabled",
+                "definition": {
+                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                        "Client-Id": {
+                            "defaultValue": "Client-Id",
+                            "type": "String"
+                        },
+                        "Client-Secret": {
+                            "defaultValue": "Client-Secret",
+                            "type": "String"
+                        },
+                        "MDTI-Resource": {
+                            "defaultValue": "https://ti.defender.microsoft.com",
+                            "type": "String"
+                        },
+                        "ResourceGroupName": {
+                            "defaultValue": "[resourceGroup().name]",
+                            "type": "String"
+                        },
+                        "Subscription-Id": {
+                            "defaultValue": "[subscription().subscriptionId]",
+                            "type": "String"
+                        },
+                        "Tenant-Id": {
+                            "defaultValue": "[subscription().tenantId]",
+                            "type": "String"
+                        }
+                    },
+                    "triggers": {
+                        "manual": {
+                            "type": "Request",
+                            "kind": "Http",
+                            "inputs": {}
+                        }
+                    },
+                    "actions": {
+                        "Response": {
+                            "runAfter": {},
+                            "type": "Response",
+                            "kind": "Http",
+                            "inputs": {
+                                "body": {
+                                    "clientId": "@parameters('Client-Id')",
+                                    "clientSecret": "@parameters('Client-Secret')",
+                                    "resource": "@{parameters('MDTI-Resource')}",
+                                    "tenantId": "@parameters('Tenant-Id')"
+                                },
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "schema": {
+                                    "properties": {
+                                        "clientId": {
+                                            "type": "string"
+                                        },
+                                        "clientSecret": {
+                                            "type": "string"
+                                        },
+                                        "resource": {
+                                            "type": "string"
+                                        },
+                                        "tenantId": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "statusCode": 200
+                            }
+                        }
+                    },
+                    "outputs": {}
+                },
+                "parameters": {
+					"Client-Id": {
+                        "value": "[parameters('Client-Id')]"
+                    },
+                    "Client-Secret": {
+						"value": "[parameters('Client-Secret')]"
+					},
+                    "MDTI-Resource": {
+                        "value": "[parameters('MDTI-Resource')]"
+                    }
+				}
+            }
+        }
+    ]
+}

@@ -24,7 +24,7 @@ Azure AD App Registration credentials(ClientId/ClientSecret/TenantId) with MDTI 
 <a name="deployment">
 
 ### Deployment Instructions
-MDTI Playbooks make use of a "base" playbook that will set a shared API connection. In order for all other playbooks to function properly, the [MDTI-Base](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Microsoft Defender Threat Intelligence/Playbooks/MDTI-Base/azuredeploy.json) playbook must be deployed first. Alternatively, you can deploy the solution which will handle deploying all playbooks at once.
+MDTI Playbooks make use of a "base" playbook that will set a shared API connection. In order for all other playbooks to function properly, the [MDTI-Base](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Microsoft%20Defender%20Threat%20Intelligence/Playbooks/MDTI-Base/azuredeploy.json) playbook must be deployed first. Alternatively, you can deploy the solution which will handle deploying all playbooks at once.
 
 1. Deploy the playbooks by clicking on "Deploy to Azure" button within each sub-folder. This will take you to deploying an ARM Template wizard.
 2. Fill in the required parameters for deploying the playbooks.
@@ -38,4 +38,4 @@ After deploying the playbook, you must authorize the connections leveraged.
 2. Under "Development Tools" (located on the left), click "API Connections".
 3. Ensure each connection has been authorized.
 
-**Note: If you've deployed the [MDTI-Base](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Microsoft Defender Threat Intelligence/Playbooks/MDTI-Base/azuredeploy.json) playbook, you will only need to authorize the Microsoft Sentinel connection.**
+**Note: If you've deployed the [MDTI-Base](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Microsoft%20Defender%20Threat%20Intelligence/Playbooks/MDTI-Base/azuredeploy.json) playbook, you will only need to authorize the Microsoft Sentinel connection.**

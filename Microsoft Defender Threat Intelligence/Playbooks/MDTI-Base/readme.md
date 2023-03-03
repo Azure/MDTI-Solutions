@@ -16,7 +16,7 @@ This playbook creates a shared Connection for all Microsoft Defender Threat Inte
     <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png"/>
 </a>
 
-## Post-Deployment Instructions
+### Post-Deployment Instructions
 After deploying the playbook, you must authorize the connections leveraged.
 
 1. Visit the playbook resource.

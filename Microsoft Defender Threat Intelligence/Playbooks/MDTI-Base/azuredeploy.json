@@ -136,7 +136,7 @@
                                             "type": "string"
                                         },
                                         "clientSecret": {
-                                            "type": "Securestring"
+                                            "type": "string"
                                         },
                                         "resource": {
                                             "type": "string"

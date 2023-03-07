@@ -153,7 +153,7 @@
                                 },
                                 "Append_host_classification": {
                                     "runAfter": {
-                                        "Set_host_variable": [
+                                        "Get_Reputation_for_host": [
                                             "Succeeded"
                                         ]
                                     },
@@ -165,7 +165,7 @@
                                 },
                                 "Create_Host_HTML_table": {
                                     "runAfter": {
-                                        "Append_host_classification": [
+                                        "Set_host_variable": [
                                             "Succeeded"
                                         ]
                                     },
@@ -193,9 +193,33 @@
                                         "uri": "https://@{body('MDTI-Base')?['MDTI-BaseUrl']}/@{body('MDTI-Base')?['Api-Version']}/security/threatIntelligence/hosts('@{items('For_each_Host')?['HostName']}.@{items('For_each_Host')?['DnsDomain']}')/reputation"
                                     }
                                 },
+                                "Reset_host_classification": {
+                                    "runAfter": {
+                                        "Reset_host_variable": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                        "name": "classification_bit",
+                                        "value": []
+                                    }
+                                },
+                                "Reset_host_variable": {
+                                    "runAfter": {
+                                        "Add_comment_to_incident_(V3)": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                        "name": "result_output_host",
+                                        "value": []
+                                    }
+                                },
                                 "Set_host_variable": {
                                     "runAfter": {
-                                        "Get_Reputation_for_host": [
+                                        "Append_host_classification": [
                                             "Succeeded"
                                         ]
                                     },
@@ -239,7 +263,7 @@
                                 },
                                 "Append_ip_classification": {
                                     "runAfter": {
-                                        "Set_ip_variable": [
+                                        "Get_reputation": [
                                             "Succeeded"
                                         ]
                                     },
@@ -251,7 +275,7 @@
                                 },
                                 "Create_IP_HTML_table": {
                                     "runAfter": {
-                                        "Append_ip_classification": [
+                                        "Set_IP_variable": [
                                             "Succeeded"
                                         ]
                                     },
@@ -279,9 +303,33 @@
                                         "uri": "https://@{body('MDTI-Base')?['MDTI-BaseUrl']}/@{body('MDTI-Base')?['Api-Version']}/security/threatIntelligence/hosts('@{items('For_each_IP_Address')?['Address']}')/reputation"
                                     }
                                 },
-                                "Set_ip_variable": {
+                                "Reset_Classification_bit": {
                                     "runAfter": {
-                                        "Get_reputation": [
+                                        "Reset_IP_Variable": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                        "name": "classification_bit",
+                                        "value": []
+                                    }
+                                },
+                                "Reset_IP_Variable": {
+                                    "runAfter": {
+                                        "Add_comment_to_incident_(V3)_2": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                        "name": "result_output_ip",
+                                        "value": []
+                                    }
+                                },
+                                "Set_IP_variable": {
+                                    "runAfter": {
+                                        "Append_ip_classification": [
                                             "Succeeded"
                                         ]
                                     },
@@ -310,7 +358,8 @@
                                 "variables": [
                                     {
                                         "name": "classification_bit",
-                                        "type": "array"
+                                        "type": "array",
+                                        "value": []
                                     }
                                 ]
                             }
@@ -326,7 +375,8 @@
                                 "variables": [
                                     {
                                         "name": "result_output_host",
-                                        "type": "array"
+                                        "type": "array",
+                                        "value": []
                                     }
                                 ]
                             }
@@ -342,7 +392,8 @@
                                 "variables": [
                                     {
                                         "name": "result_output_ip",
-                                        "type": "array"
+                                        "type": "array",
+                                        "value": []
                                     }
                                 ]
                             }

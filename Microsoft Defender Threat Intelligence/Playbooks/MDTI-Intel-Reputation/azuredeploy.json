@@ -192,6 +192,18 @@
                                         "name": "result_output_host",
                                         "value": "@body('Get_reputation_for_host')?['rules']"
                                     }
+                                },
+                                "Reset_host_variable": {
+                                    "runAfter": {
+                                        "Add_comment_to_incident_(V3)": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                        "name": "result_output_host",
+                                        "value": []
+                                    }
                                 }
                             },
                             "runAfter": {
@@ -267,6 +279,18 @@
                                         "name": "result_output_ip",
                                         "value": "@body('Get_reputation')?['rules']"
                                     }
+                                },
+                                "Reset_IP_variable": {
+                                    "runAfter": {
+                                        "Add_comment_to_incident_(V3)_2": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                        "name": "result_output_ip",
+                                        "value": []
+                                    }
                                 }
                             },
                             "runAfter": {
@@ -287,7 +311,8 @@
                                 "variables": [
                                     {
                                         "name": "result_output_host",
-                                        "type": "array"
+                                        "type": "array",
+                                        "value": []
                                     }
                                 ]
                             }
@@ -303,7 +328,8 @@
                                 "variables": [
                                     {
                                         "name": "result_output_ip",
-                                        "type": "array"
+                                        "type": "array",
+                                        "value": []
                                     }
                                 ]
                             }

@@ -21,6 +21,8 @@ Microsoft centralizes numerous data sets into a single platform, Microsoft Defen
 ## Authentication
 Azure AD App Registration credentials(ClientId/ClientSecret/TenantId) with MDTI API Permissions are needed when configuring this playbook. Those can be found on your [Azure Client App](https://learn.microsoft.com/en-us/rest/api/azure/#register-your-client-application-with-azure-ad) page.
 
+MDTI API documentation for more details, [MDTI API](https://learn.microsoft.com/en-us/graph/api/resources/security-threatintelligence?view=graph-rest-beta&branch=2023-03-01-threatIntelligence).
+
 <a name="deployment">
 
 ### Deployment Instructions

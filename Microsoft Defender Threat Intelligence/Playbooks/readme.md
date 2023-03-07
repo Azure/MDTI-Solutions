@@ -12,7 +12,7 @@
 <a name="overview">
 
 # Overview
-Microsoft centralizes numerous data sets into a single platform, Microsoft Defender Threat Intelligence (MDTI), making it easier for Microsoft’s community and customers to conduct infrastructure analysis. Microsoft’s primary focus is to provide as much data as possible about Internet infrastructure to support a variety of security use cases. If you have trouble accessing your account or your credentials contact your account representative or reach out to discussMDTI[@]microsoft.com
+Microsoft centralizes numerous data sets into a single platform, Microsoft Defender Threat Intelligence [(MDTI)](https://learn.microsoft.com/en-us/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti), making it easier for Microsoft’s community and customers to conduct infrastructure analysis. Microsoft’s primary focus is to provide as much data as possible about Internet infrastructure to support a variety of security use cases. If you have trouble accessing your account or your credentials contact your account representative or reach out to discussMDTI[@]microsoft.com
 
 # MDTI Playbook Documentation
 

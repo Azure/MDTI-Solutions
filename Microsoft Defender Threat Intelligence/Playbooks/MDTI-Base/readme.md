@@ -5,7 +5,11 @@ This playbook creates a shared Connection for all Microsoft Defender Threat Inte
 
 ## Pre-deployment Instructions
 
-1. Azure AD App Registration credentials(ClientId/ClientSecret/TenantId) with MDTI API Permissions are needed when configuring this playbook. Those can be found on your [Azure Client App](https://learn.microsoft.com/en-us/rest/api/azure/#register-your-client-application-with-azure-ad) page. If you have trouble accessing your account or your credentials contact your account representative or reach out to discussMDTI[@]microsoft.com.
+1. Azure AD App Registration credentials(ClientId/ClientSecret/TenantId) with MDTI API Permissions are needed when configuring this playbook. Please check here for instructions on creating an App Registration [Azure Client App](https://learn.microsoft.com/en-us/rest/api/azure/#register-your-client-application-with-azure-ad) page. 
+
+MDTI API documentation for more details, [MDTI API](https://review.learn.microsoft.com/en-us/graph/api/resources/security-threatintelligence?view=graph-rest-beta&branch=2023-03-01-threatIntelligence)
+
+If you have trouble accessing your account or your credentials contact your account representative or reach out to discussMDTI[@]microsoft.com.
 
 ## Deployment
 

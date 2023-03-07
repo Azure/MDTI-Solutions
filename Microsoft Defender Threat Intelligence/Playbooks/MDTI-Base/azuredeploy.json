@@ -79,7 +79,7 @@
                         },
                         "Client-Secret": {
                             "defaultValue": "Client-Secret",
-                            "type": "String"
+                            "type": "SecureString"
                         },
                         "MDTI-Resource": {
                             "defaultValue": "https://graph.microsoft.com",
@@ -136,7 +136,7 @@
                                             "type": "string"
                                         },
                                         "clientSecret": {
-                                            "type": "string"
+                                            "type": "Securestring"
                                         },
                                         "resource": {
                                             "type": "string"

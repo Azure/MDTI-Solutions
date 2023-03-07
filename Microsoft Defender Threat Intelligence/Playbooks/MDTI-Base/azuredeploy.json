@@ -116,6 +116,13 @@
                     "actions": {
                         "Response": {
                             "runAfter": {},
+							"runtimeConfiguration": {
+								"secureData": {
+									"properties": [
+											"inputs"
+										]
+									}
+								},
                             "type": "Response",
                             "kind": "Http",
                             "inputs": {

@@ -193,18 +193,6 @@
                                         "uri": "https://@{body('MDTI-Base')?['MDTI-BaseUrl']}/@{body('MDTI-Base')?['Api-Version']}/security/threatIntelligence/hosts('@{items('For_each_Host')?['HostName']}.@{items('For_each_Host')?['DnsDomain']}')/reputation"
                                     }
                                 },
-                                "Reset_host_classification": {
-                                    "runAfter": {
-                                        "Reset_host_variable": [
-                                            "Succeeded"
-                                        ]
-                                    },
-                                    "type": "SetVariable",
-                                    "inputs": {
-                                        "name": "classification_bit",
-                                        "value": []
-                                    }
-                                },
                                 "Reset_host_variable": {
                                     "runAfter": {
                                         "Add_comment_to_incident_(V3)": [
@@ -301,18 +289,6 @@
                                         },
                                         "method": "GET",
                                         "uri": "https://@{body('MDTI-Base')?['MDTI-BaseUrl']}/@{body('MDTI-Base')?['Api-Version']}/security/threatIntelligence/hosts('@{items('For_each_IP_Address')?['Address']}')/reputation"
-                                    }
-                                },
-                                "Reset_Classification_bit": {
-                                    "runAfter": {
-                                        "Reset_IP_Variable": [
-                                            "Succeeded"
-                                        ]
-                                    },
-                                    "type": "SetVariable",
-                                    "inputs": {
-                                        "name": "classification_bit",
-                                        "value": []
                                     }
                                 },
                                 "Reset_IP_Variable": {

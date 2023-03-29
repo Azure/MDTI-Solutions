@@ -1,0 +1,1058 @@
+{
+	"info": {
+		"_postman_id": "7d6e9ae3-78f8-4aff-8b58-858338fcc204",
+		"name": "Microsoft Graph (beta) - Threat Intelligence Copy",
+		"description": "# Microsoft Graph (beta) - Threat Intelligence\n\nThis Postman collection contains example calls for the Microsoft Graph (beta) ThreatIntelligence APs. \n\nThese examples are meant to highlight and demonstrate possible capabilities of the APIs.\n\nThese APIs are in a Public Preview state.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5909935"
+	},
+	"item": [
+		{
+			"name": "Host Data",
+			"item": [
+				{
+					"name": "Hostname Data",
+					"item": [
+						{
+							"name": "Host by Hostname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"contoso.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reputation for a Hostname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com/reputation",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"contoso.com",
+										"reputation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PassiveDns by Hostname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com/passiveDns?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"contoso.com",
+										"passiveDns"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passiveDnsReverse by hostname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com/passiveDnsReverse?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"contoso.com",
+										"passiveDnsReverse"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Components for a Hostname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com/components?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"contoso.com",
+										"components"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cookies for a Hostname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com/cookies?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"contoso.com",
+										"cookies"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Trackers for a Hostname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com/trackers?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"contoso.com",
+										"trackers"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "IP Address Data",
+					"item": [
+						{
+							"name": "Host by IP Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/20.103.85.33",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"20.103.85.33"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reputation for an IP Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/20.103.85.33/reputation",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"20.103.85.33",
+										"reputation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PassiveDns by IP Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://canary.graph.microsoft.com/testprodbetathreatIntelligenceAPIs/security/threatIntelligence/hosts('104.156.149.53')/pdns?$count=true",
+									"protocol": "https",
+									"host": [
+										"canary",
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"testprodbetathreatIntelligenceAPIs",
+										"security",
+										"threatIntelligence",
+										"hosts('104.156.149.53')",
+										"pdns"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passiveDnsReverse by IP Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/20.103.85.33/passiveDnsReverse?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"20.103.85.33",
+										"passiveDnsReverse"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Components for an IP Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/20.103.85.33/components?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"20.103.85.33",
+										"components"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cookies for an IP Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/20.103.85.33/cookies?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"20.103.85.33",
+										"cookies"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Trackers for an IP Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/hosts/20.103.85.33/trackers?$count=true",
+									"protocol": "https",
+									"host": [
+										"graph",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"beta",
+										"security",
+										"threatIntelligence",
+										"hosts",
+										"20.103.85.33",
+										"trackers"
+									],
+									"query": [
+										{
+											"key": "$count",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "# Host Data\n\nThese APIs demonstrate supported capabilities to retrieve Threat Intelligence information about hosts (either by hostname or IP Address)."
+		},
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "List Articles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/articles?$count=true",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Article",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/articles/e0c5c210",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"articles",
+								"e0c5c210"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Article - Indicators",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/articles/e0c5c210/indicators?$count=true",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"articles",
+								"e0c5c210",
+								"indicators"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Intel Profiles",
+			"item": [
+				{
+					"name": "List Intel Profiles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/intelProfiles?$count=true",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"intelProfiles"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Intel Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/intelProfiles/actinium",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"intelProfiles",
+								"actinium"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Intel Profile - Indicators",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/intelProfiles/actinium/indicators",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"intelProfiles",
+								"actinium",
+								"indicators"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vulnerabilities",
+			"item": [
+				{
+					"name": "Get Vulnerability",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/vulnerabilities/CVE-2021-44228",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"vulnerabilities",
+								"CVE-2021-44228"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vulnerability - Related Components",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/vulnerabilities/CVE-2021-44228/components?$count=true",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"vulnerabilities",
+								"CVE-2021-44228",
+								"components"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vulnerability - Related Articles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/security/threatIntelligence/vulnerabilities/CVE-2021-44228/articles?$count=true",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"security",
+								"threatIntelligence",
+								"vulnerabilities",
+								"CVE-2021-44228",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "https://graph.microsoft.com/.default",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "app 1",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "state",
+				"value": "abv",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://localhost:8090",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{clientSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://login.microsoftonline.com/{{tenantId}}/oauth2/v2.0/authorize",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://login.microsoftonline.com/{{tenantId}}/oauth2/v2.0/token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "tenantId",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "clientId",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "clientSecret",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+#  Resolution tab export from DTI
+#  Kusto Queries inside of M365D advanced threat hunting
+#  for device based events
+
+let ThreatIntel = materialize(
+    externaldata (parentHostName:string,childHostName:string,firstSeen:datetime, lastSeen:datetime, attributeCause:string, tags:string)
+        [@'Replace-with-your-Storage-Generated-SAS-URL-Token']
+        with (format='csv', ignorefirstrecord = true)
+    | extend tags = split(tags, '|')
+);
+union (
+    // Search for device click events
+    ThreatIntel
+    | join kind=inner (
+        DeviceNetworkEvents
+        | where isnotempty( RemoteUrl)
+        | extend parentHostName = iff(RemoteUrl contains '//', tostring(parse_url(RemoteUrl).Host), RemoteUrl)
+    ) on parentHostName
+), (
+    // BrowserLaunchedToOpenUrl, SmartScreenUrlWarning, ExploitGuardNetworkProtectionBlocked
+    ThreatIntel
+    | join kind=inner (
+        DeviceEvents
+        | where isnotempty( RemoteUrl)
+        | extend parentHostName = iff(RemoteUrl contains '//', tostring(parse_url(RemoteUrl).Host), RemoteUrl)
+    ) on parentHostName
+), (
+    // Mark of the Web
+    ThreatIntel
+    | join kind=inner (
+        DeviceFileEvents
+        | where isnotempty( FileOriginUrl)
+        | extend parentHostName = iff(FileOriginUrl contains '//', tostring(parse_url(FileOriginUrl).Host), FileOriginUrl)
+    ) on parentHostName
+), (
+    // Referrer Mark of the Web
+    ThreatIntel
+    | join kind=inner (
+        DeviceFileEvents
+        | where isnotempty( FileOriginReferrerUrl)
+        | extend parentHostName = iff(FileOriginReferrerUrl contains '//', tostring(parse_url(FileOriginReferrerUrl).Host), FileOriginReferrerUrl)
+    ) on parentHostName
+), (
+    ThreatIntel
+    | join kind=inner (
+        // DNS queries
+        DeviceEvents
+        | where ActionType == 'DnsQueryResponse'
+        | extend parentHostName = tostring(parse_json(AdditionalFields).DnsQueryString)
+        ) on parentHostName
+)

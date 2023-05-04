@@ -25,14 +25,16 @@ In the custom deployment screen add the client ID and app secret you created.
 This information will be saved in an Azure key vault.
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMDTI-Solutions%2Ftree%2Fmaster%2FWorkbooks%2FMDTI-Workbook-Solution%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMDTI-Solutions%2Fmaster%2FWorkbooks%2FMDTI-Workbook-Solution%2Fazuredeploy.json" target="_blank">
     <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
+
+
 
 ### Workbook configuration
 
 1.	Post installation, navigate to the target Resource group you deploy the solution and copy the azure function name.
 
-2.	Open the workbook and in the “Deployed-AzureFunction” select the name you copy in step 1.
+2.	Open the workbook and in the “Deployed-AzureFunction” select the name you copy in step 1
 
 To set up the MDTI Sentinel Incident View Tab, choose the subscription and workspace for the Sentinel instance. Keep in mind that although the remaining sections of this workbook do not depend on Sentinel data, you must still select a workspace in this tab.

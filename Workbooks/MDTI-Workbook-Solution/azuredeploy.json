@@ -164,6 +164,7 @@
 						"tenantId": "[variables('TenantId')]",
 						"Schedule": "0 */10 * * * *",
 						"WEBSITE_RUN_FROM_PACKAGE": "https://github.com/Azure/MDTI-Solutions/blob/master/Workbooks/MDTI-Workbook-Solution/mdtiwb.zip?raw=true"
+						
 
 					}
 				}

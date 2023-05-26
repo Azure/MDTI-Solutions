@@ -1,0 +1,22 @@
+#  Resolution tab export from DTI
+#  Kusto Queries inside of M365D advanced threat hunting
+#  for URLs in emails
+
+let ThreatIntel = materialize(
+    externaldata (parentHostName:string,childHostName:string,firstSeen:datetime, lastSeen:datetime, attributeCause:string, tags:string)
+        [@'Replace-with-your-Storage-Generated-SAS-URL-Token']
+        with (format='csv', ignorefirstrecord = true)
+    | extend tags = split(tags, '|')
+);
+union (
+    // E-mails with URL embedded
+    ThreatIntel
+    | join EmailUrlInfo on $left.parentHostName == $right.UrlDomain
+), (
+    ThreatIntel
+    | join (
+        UrlClickEvents
+        | mv-expand todynamic(UrlChain) to typeof(string)
+        | extend parentHostName = iff(UrlChain contains '//', tostring(parse_url(UrlChain).Host), UrlChain)
+    ) on parentHostName
+)

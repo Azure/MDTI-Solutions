@@ -1,0 +1,13 @@
+#  Resolution tab export from DTI
+#  Kusto Queries inside of M365D advanced threat hunting
+#  for dns queries from domain controllers
+
+
+externaldata (parentHostName:string,childHostName:string,firstSeen:datetime, lastSeen:datetime, attributeCause:string, tags:string)
+        [@'Replace-with-your-Storage-Generated-SAS-URL-Token']
+        with (format='csv', ignorefirstrecord = true)
+| extend tags = split(tags, '|')
+| join kind=inner (
+    IdentityQueryEvents
+    | where ActionType contains "dns"
+) on $left.parentHostName == $right.QueryTarget

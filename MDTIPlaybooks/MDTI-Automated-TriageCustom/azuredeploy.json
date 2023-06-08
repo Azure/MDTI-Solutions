@@ -639,7 +639,7 @@
                                 "host":  {
                                     "triggerName":  "manual",
                                     "workflow":  {
-                                        "id":  "/subscriptions/1c61ccbf-70b3-45a3-a1fb-848ce46d70a6/resourceGroups/D4ioTlabSean/providers/Microsoft.Logic/workflows/MDTI-Base"
+                                       "id": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Logic/workflows/MDTI-Base')]"
                                     }
                                 }
                             }

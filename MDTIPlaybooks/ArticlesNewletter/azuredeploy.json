@@ -1,30 +1,34 @@
 {
     "$schema":  "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion":  "1.0.0.0",
-    "metadata":  {
-        "title":  "",
-        "description":  "",
-        "prerequisites":  "",
-        "postDeployment":  [
-        ],
-        "prerequisitesDeployTemplateFile":  "",
-        "lastUpdateTime":  "",
-        "entities":  [
-        ],
-        "tags":  [
-        ],
-        "support":  {
-            "tier":  "community",
-            "armtemplate":  "Generated from https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator"
-        },
-        "author":  {
-            "name":  ""
-        }
-    },
     "parameters":  {
         "PlaybookName":  {
             "defaultValue":  "ArticlesNewletter",
             "type":  "string"
+        },
+        "ClientID":  {
+            "type":  "string",
+            "metadata":  {
+                "description":  "Enter value for ClientID"
+            }
+        },
+        "Secret":  {
+            "type":  "string",
+            "metadata":  {
+                "description":  "Enter value for Secret"
+            }
+        },
+        "Tenant":  {
+            "type":  "string",
+            "metadata":  {
+                "description":  "Enter value for Tenant"
+            }
+        },
+        "emailto":  {
+            "type":  "string",
+            "metadata":  {
+                "description":  "Enter value for emailto"
+            }
         }
     },
     "variables":  {
@@ -43,6 +47,22 @@
                             "defaultValue":  {
                             },
                             "type":  "Object"
+                        },
+                        "ClientID":  {
+                            "defaultValue":  "[parameters('ClientID')]",
+                            "type":  "string"
+                        },
+                        "Secret":  {
+                            "defaultValue":  "[parameters('Secret')]",
+                            "type":  "string"
+                        },
+                        "Tenant":  {
+                            "defaultValue":  "[parameters('Tenant')]",
+                            "type":  "string"
+                        },
+                        "emailto":  {
+                            "defaultValue":  "[parameters('emailto')]",
+                            "type":  "string"
                         }
                     },
                     "triggers":  {
@@ -84,8 +104,7 @@
                                 "variables":  [
                                     {
                                         "name":  "EmailTo",
-                                        "type":  "string",
-                                        "value":  "seansewasong@microsoft.com"
+                                        "type":  "string"
                                     }
                                 ]
                             }
@@ -113,7 +132,9 @@
                                             "type":  "Compose",
                                             "inputs":  {
                                                 "ArticleName":  "@{items('For_each')?['title']}",
-                                                "Article_URL":  "https://ti.defender.microsoft.com/articles/@{items('For_each')['id']}"
+                                                "Article_URL":  "https://ti.defender.microsoft.com/articles/@{items('For_each')['id']}",
+                                                "Created Time ":  "@{items('For_each')?['createdDateTime']}",
+                                                "Tags ":  "@{items('For_each')?['tags']}"
                                             }
                                         }
                                     },
@@ -259,7 +280,7 @@
                                     {
                                         "name":  "secret",
                                         "type":  "string",
-                                        "value":  "nVE8Q~KvzTA6SVTu2P8TZL-rKiC_kmBq.L4.dcIq"
+                                        "value":  "@parameters('Secret')"
                                     }
                                 ]
                             }
@@ -299,7 +320,7 @@
                                     {
                                         "name":  "Tenant",
                                         "type":  "string",
-                                        "value":  "5f1060f2-d9a4-4f59-bf9c-1dd8f3604a4b"
+                                        "value":  "@parameters('Tenant')"
                                     }
                                 ]
                             }
@@ -316,7 +337,7 @@
                                     {
                                         "name":  "application",
                                         "type":  "string",
-                                        "value":  "024559d9-8a2e-4dfb-b1d4-13dc85384551"
+                                        "value":  "@parameters('ClientID')"
                                     }
                                 ]
                             }
@@ -377,9 +398,7 @@
                 "LogicAppsCategory":  "security",
                 "Source":  "MDTI",
                 "createddate":  "04/19/2023",
-                "owner":  "ajaykallur",
-                "hidden-SentinelTemplateName":  "ArticlesNewletter",
-                "hidden-SentinelTemplateVersion":  "1.0"
+                "owner":  "ajaykallur"
             },
             "identity":  {
                 "type":  "SystemAssigned"

@@ -10,7 +10,8 @@ This playbook uses the [Microsoft Defender Threat Intelligence](https://learn.mi
 
 ## Deployment
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2FMicrosoft%2520Defender%2520Threat%2520Intelligence%2FPlaybooks%2FMDTI-Automated-Triage%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%MDTI-Solutions%2FMDTIPlaybooks%2FMDTI-Data-HostInfo
+%2Fazuredeploy.json" target="_blank">
     <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
 <a href="https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2FMicrosoft%2520Defender%2520Threat%2520Intelligence%2FPlaybooks%2FMDTI-Automated-Triage%2Fazuredeploy.json" target="_blank">

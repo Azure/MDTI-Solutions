@@ -12,14 +12,10 @@ After identifying these domains, the Typosquat playbook automatically runs them 
 ## Deployment
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKwachSean%2FMDTIplaybooks%2Fmain%2FTyposquat(openSquat)
-%2Fazuredeploy.json"
-target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMDTI-Solutions%2Fmaster%2FMDTIPlaybooks%2FTypoSquat playbook%2Fazuredeploy.json" target="_blank">
     <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKwachSean%2FMDTIplaybooks%2Fmain%2FTyposquat(openSquat)
-%2Fazuredeploy.json"
-target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMDTI-Solutions%2Fmaster%2FMDTIPlaybooks%2FTypoSquat playbook%2Fazuredeploy.json" target="_blank">
     <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png"/>
 </a>
 

@@ -68,6 +68,6 @@ For information on Azure Libraries (SDK) for Python: https://learn.microsoft.com
 What's New: APIs in Microsoft Graph: https://techcommunity.microsoft.com/t5/microsoft-defender-threat/what-s-new-apis-in-microsoft-graph/ba-p/3780350
 
 ## Author
-Dennis Mercer
-Sr Program Manager
+Dennis Mercer\
+Sr Program Manager\
 Microsoft CxE MDTI

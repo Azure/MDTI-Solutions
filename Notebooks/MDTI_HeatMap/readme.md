@@ -66,3 +66,9 @@ This notebook is provided as-is and without warranty. Use it at your own risk. T
 For information on Azure Libraries (SDK) for Python: https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview
 
 What's New: APIs in Microsoft Graph: https://techcommunity.microsoft.com/t5/microsoft-defender-threat/what-s-new-apis-in-microsoft-graph/ba-p/3780350
+
+
+## Author
+Dennis Mercer\
+Senior Program Manager\
+CxE MDTI

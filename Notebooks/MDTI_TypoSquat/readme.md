@@ -73,4 +73,5 @@ What's New: APIs in Microsoft Graph: https://techcommunity.microsoft.com/t5/micr
 ## Author
 Dennis Mercer\
 Sr Program Manager\
-Microsoft CxE MDTI
+Microsoft CxE\
+Microsoft Defender Threat Intelligence

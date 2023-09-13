@@ -46,8 +46,10 @@ The script prints a JSON response from the API containing host component informa
 This script is provided as-is and without warranty. Use it at your own risk. The script interacts with the Microsoft Graph Security API and utilizes your Azure AD credentials to retrieve host component information. Make sure you have the necessary permissions and follow Microsoft's security best practices when handling authentication credentials.
 
 Additional Information
-For information on Azure Libraries (SDK) for Python: https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview
-
+## Additional Information
+Azure Libraries for Python: https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview  \
+Microsoft Graph SDK Overview: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview  \
+Microsoft Learn Threat Inteligence Graph API: https://learn.microsoft.com/en-us/graph/api/resources/security-threatintelligence-overview?view=graph-rest-1.0 \
 What's New: APIs in Microsoft Graph: https://techcommunity.microsoft.com/t5/microsoft-defender-threat/what-s-new-apis-in-microsoft-graph/ba-p/3780350
 
 ## Author:

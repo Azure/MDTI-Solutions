@@ -47,7 +47,9 @@ The notebook will output a JSON response from the API that lists cookies tied to
 This notebook is supplied "as-is" and without any warranties. Utilize it responsibly. It communicates with the Microsoft Graph Security API and employs your Azure AD credentials to fetch domain-specific cookies. Always adhere to Microsoft's security recommendations when managing authentication credentials.
 
 ## Additional Information
-Azure Libraries for Python: https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview\
+## Additional Information
+Azure Libraries for Python: https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview  \
+Microsoft Graph SDK Overview: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview  \
 Microsoft Learn Threat Inteligence Graph API: https://learn.microsoft.com/en-us/graph/api/resources/security-threatintelligence-overview?view=graph-rest-1.0 \
 What's New: APIs in Microsoft Graph: https://techcommunity.microsoft.com/t5/microsoft-defender-threat/what-s-new-apis-in-microsoft-graph/ba-p/3780350
 

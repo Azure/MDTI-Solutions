@@ -1,6 +1,6 @@
-# MDTI Host Component Information Retrieval Jupyter Notebook
+# MDTI SSL Certificate Jupyter Notebook
 
-MDTI Host Component Information Retrieval is a Python script that utilizes the Microsoft Graph Security API to retrieve host component information for a given domain.
+MDTI SSL Certificate Notebook is a Jupyter Notebook Python script that utilizes the Microsoft Graph Security API to retrieve SSL Certificates associated with a given entity.
 
 ## Prerequisites
 Before running the script, ensure you have the following:
@@ -35,9 +35,9 @@ As with the previous script, ensure that your client secret is properly secured 
 
 ## Usage
 Open Jupyter Notebook on your local machine.
-Open the MDTI Host Component Information Retrieval script file.
+Open the MDTI SSL Certificate Jupyter Notebook.
 Run the script cell by cell, following the instructions and comments provided.
-The script will retrieve host component information for the specified domain and print the JSON response from the API.
+The script will retrieve all known SSL Certificates for the specified entity and print the JSON response from the API.
 
 ## Results
 The script prints a JSON response from the API containing host component information for the specified domain. This information includes properties of the host and associated entities.

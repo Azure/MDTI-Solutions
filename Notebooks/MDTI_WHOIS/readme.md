@@ -1,6 +1,6 @@
-# MDTI Host Component Information Retrieval Jupyter Notebook
+# MDTI WHOIS Jupyter Notebook
 
-MDTI Host Component Information Retrieval is a Python script that utilizes the Microsoft Graph Security API to retrieve host component information for a given domain.
+MDTI WHOIS Notebook is a Jupyter Notebook Python script that utilizes the Microsoft Graph Security API to retrieve WHOIS Information associated with a given entity.
 
 ## Prerequisites
 Before running the script, ensure you have the following:
@@ -20,7 +20,6 @@ pip install azure-identity requests json os
 Open the script file and provide the necessary configuration details in the designated placeholders:
 
 ```Python
-Copy code
 credential = ClientSecretCredential(
     tenant_id='Place your Tenant ID Here',  # Your Azure AD tenant ID
     client_id='Place your Client ID Here',  # Your Application Client ID
@@ -35,12 +34,12 @@ As with the previous script, ensure that your client secret is properly secured 
 
 ## Usage
 Open Jupyter Notebook on your local machine.
-Open the MDTI Host Component Information Retrieval script file.
+Open the MDTI WHOIS Jupyter Notebook.
 Run the script cell by cell, following the instructions and comments provided.
-The script will retrieve host component information for the specified domain and print the JSON response from the API.
+The script will retrieve the WHOIS Information for the specified entity and print the JSON response from the API.
 
 ## Results
-The script prints a JSON response from the API containing host component information for the specified domain. This information includes properties of the host and associated entities.
+The script prints a JSON response from the API containing WHOIS information for the specified domain. 
 
 ## Disclaimer
 This script is provided as-is and without warranty. Use it at your own risk. The script interacts with the Microsoft Graph Security API and utilizes your Azure AD credentials to retrieve host component information. Make sure you have the necessary permissions and follow Microsoft's security best practices when handling authentication credentials.

@@ -19,11 +19,11 @@ o	Value: As mentioned Threat Intelligence collection will always have gaps and t
 ## Deployment
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%MDTI-Solutions%2FMDTIPlaybooks%2FMDTIFeed-Anomali%2Fazuredeploy.json"
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMDTI-Solutions%2Fmaster%2FMDTIPlaybooks%2FMDTIFeed-Anomali%2Fazuredeploy.json"
 target="_blank">
     <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%MDTI-Solutions%2FMDTIPlaybooks%2FMDTIFeed-Anomali%2Fazuredeploy.json"
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMDTI-Solutions%2Fmaster%2FMDTIPlaybooks%2FMDTIFeed-Anomali%2Fazuredeploy.json"
 target="_blank">
     <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png"/>
 </a>

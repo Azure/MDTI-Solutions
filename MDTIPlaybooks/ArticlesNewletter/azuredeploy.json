@@ -358,7 +358,7 @@
                                     "type":  "ActiveDirectoryOAuth"
                                 },
                                 "method":  "GET",
-                                "uri":  "https://graph.microsoft.com/beta/security/threatIntelligence/articles?$sort=createdDateTime\u0026$top=50\u0026$select=title,tags,createdDateTime"
+                                "uri":  "https://graph.microsoft.com/v1.0/security/threatIntelligence/articles?$sort=createdDateTime\u0026$top=50\u0026$select=title,tags,createdDateTime"
                             }
                         },
                         "int_article2":  {

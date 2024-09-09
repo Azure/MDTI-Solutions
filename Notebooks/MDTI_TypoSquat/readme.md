@@ -14,7 +14,7 @@ Before using the script, make sure you have the following prerequisites:
 2. Install the required Python packages by running the following command in your terminal or command prompt:
 
 ```python
-pip install azure-identity msgraph-sdk-security pandas matplotlib  
+pip install azure-identity pandas  
 ```
 ## Configuration
 
